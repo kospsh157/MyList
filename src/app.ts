@@ -1,9 +1,9 @@
-import { Composable, ItemPageComponent, Page } from "./components/page/Page.js"; // 지금은 따로 리액트나 다른 프레임워크를 쓰지 않고 있기 때문에, 확장자명 .js까지 적어줘야한다.
+import { Composable, ItemPageComponent, Page } from "./components/page/page.js"; // 지금은 따로 리액트나 다른 프레임워크를 쓰지 않고 있기 때문에, 확장자명 .js까지 적어줘야한다.
 import { Image } from "./components/page/item/Image.js";
 import { Note } from "./components/page/item/Note.js";
 import { Todo } from "./components/page/item/Todo.js";
 import { Youtube } from "./components/page/item/Youtube.js";
-import { Component } from "./components/BaseComponent.js";
+import { Component } from "./components/baseComponent.js";
 import {
   Dialog,
   MediaDataInput,

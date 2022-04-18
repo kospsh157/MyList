@@ -28,7 +28,7 @@
 // }
 
 // Refactoring
-import { BaseComponent } from "../../BaseComponent.js";
+import { BaseComponent } from "../../baseComponent.js";
 export class Image extends BaseComponent<HTMLElement> {
   constructor(title: string, url: string) {
     super(

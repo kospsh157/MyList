@@ -1,4 +1,4 @@
-import { BaseComponent } from "../../BaseComponent.js";
+import { BaseComponent } from "../../baseComponent.js";
 
 export class Youtube extends BaseComponent<HTMLElement> {
   constructor(title: string, url: string) {

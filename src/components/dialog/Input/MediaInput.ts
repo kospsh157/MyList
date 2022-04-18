@@ -1,4 +1,4 @@
-import { BaseComponent } from "../../BaseComponent.js";
+import { BaseComponent } from "../../baseComponent.js";
 import { MediaDataInput } from "../Dialog.js";
 
 export class MediaInput

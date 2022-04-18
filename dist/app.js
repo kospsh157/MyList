@@ -1,4 +1,4 @@
-import { ItemPageComponent, Page } from "./components/page/Page.js";
+import { ItemPageComponent, Page } from "./components/page/page.js";
 import { Image } from "./components/page/item/Image.js";
 import { Note } from "./components/page/item/Note.js";
 import { Todo } from "./components/page/item/Todo.js";

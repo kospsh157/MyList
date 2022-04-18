@@ -1,4 +1,4 @@
-import { BaseComponent } from "../../BaseComponent.js";
+import { BaseComponent } from "../../baseComponent.js";
 
 export class Todo extends BaseComponent<HTMLElement> {
   private cnt: number = 1;

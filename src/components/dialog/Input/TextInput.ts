@@ -1,4 +1,4 @@
-import { BaseComponent } from "../../BaseComponent.js";
+import { BaseComponent } from "../../baseComponent.js";
 import { TextDataInput } from "../Dialog.js";
 
 export class TextInput
