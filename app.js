@@ -40,7 +40,6 @@ class App {
       <p>
         I done this project during learning in Dream-coding Academy(Online). I have learned about TypeScript and OOP in this project. <br/>
         Dram-Coding Academy url: <a href = https://academy.dream-coding.com>https://academy.dream-coding.com</a> (Korean) <br/>
-        She(teacher) is very nice and I know she is currently working as a manager in the USA. <br/>
         I learned a lot from watching her coding style.<br/>
         During this project, I did not simply follow her code, but understood and digested it with my own.<br/>
       </p>
@@ -83,3 +82,15 @@ class App {
   }
 }
 new App(document.querySelector(".document"), document.body);
+
+// AWS amplify에 호스팅에 대하여.
+/*
+  1. 어느정도 자동으로 빌드를 스스로 한다. 
+  2. aws 서버에는 타입스크립트가 깔려있지 않아서 tsc -b를 사용하지못한다.
+    1. 따라서 그냥 이미 빌드된 js파일을 루트폴더에 만들어놔야 한다.
+  3. dist 폴더가 있으면 오히려 js파일을 불러오지 못 한다. 
+    1. dist 폴더에 있던 js파일을 루트폴더로 옮기니깐 정상적으로 서버가 js파일을 읽을 수 있었다.
+      1. 그 원인을 찾았다. .gitignore 파일에 dist는 제외되어서 애초에 깃레포짓에 dist폴더를 업로드 되지 않았던 것이다.
+  4. aws 서버는 자동으로 index.html 파일을 찾아 호스팅하려고 한다. 
+  5. 백엔드, 프론트엔드 부분에서 자동으로 빌드를 하려고 한다. 
+*/
