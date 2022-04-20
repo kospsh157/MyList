@@ -1,11 +1,11 @@
-import { ItemPageComponent, Page } from "./components/page/page.js";
-import { Image } from "./components/page/item/Image.js";
-import { Note } from "./components/page/item/Note.js";
-import { Todo } from "./components/page/item/Todo.js";
-import { Youtube } from "./components/page/item/Youtube.js";
-import { Dialog } from "./components/dialog/Dialog.js";
-import { MediaInput } from "./components/dialog/Input/MediaInput.js";
-import { TextInput } from "./components/dialog/Input/TextInput.js";
+import { ItemPageComponent, Page } from "/dist/components/page/page.js";
+import { Image } from "/dist/components/page/item/Image.js";
+import { Note } from "/dist/components/page/item/Note.js";
+import { Todo } from "/dist/components/page/item/Todo.js";
+import { Youtube } from "/dist/components/page/item/Youtube.js";
+import { Dialog } from "/dist/components/dialog/Dialog.js";
+import { MediaInput } from "/dist/components/dialog/Input/MediaInput.js";
+import { TextInput } from "/dist/components/dialog/Input/TextInput.js";
 class App {
   constructor(appRoot, dialogRoot) {
     this.dialogRoot = dialogRoot;
