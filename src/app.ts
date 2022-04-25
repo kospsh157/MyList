@@ -34,6 +34,13 @@ class App {
     this.page.attachTo(appRoot); // 여기서 appRoot는 index.html의 .documnet클래스이다. 즉 가장 페이지를 표시해준 가장 큰 부모이다.
     // page를 생성하고, 그 page를 attachTo()함수를 이용해 .document에 붙여 넣는 것이다.
 
+    const gitNoteP = document.createElement("p");
+    gitNoteP.innerHTML = `<p>
+      You can check codes of this project at <a href='https://github.com/kospsh157/MyList' >https://github.com/kospsh157/MyList</a>
+    </p>`;
+    const gitNote = new Note("Welcome My Study Project.", gitNoteP);
+    this.page.addChild(gitNote);
+
     // Example1 Image
     const img = new Image(
       "You can save image, youtube, note, todo on here.",
@@ -42,10 +49,7 @@ class App {
     this.page.addChild(img);
 
     // Example2 Youtube
-    const yout = new Youtube(
-      "The important thing is to prepare the resources and time to get back up from failure.",
-      "https://youtu.be/3KvdWd9iqAY"
-    );
+    const yout = new Youtube("Youtube Video", "https://youtu.be/7aEUakKMLBs");
     this.page.addChild(yout);
 
     // Note1 Usage
@@ -70,9 +74,8 @@ class App {
     const p = document.createElement("p");
     p.innerHTML = `
       <p>
-        I done this project during learning in Dream-coding Academy(Online). I have learned about TypeScript and OOP in this project. <br/>
+         I done this project during learning in Dream-coding Academy(Online). I have learned about TypeScript and OOP in this project. <br/>
         Dram-Coding Academy url: <a href = https://academy.dream-coding.com>https://academy.dream-coding.com</a> (Korean) <br/>
-        She(teacher) is very nice and I know she is currently working as a manager in the USA. <br/>
         I learned a lot from watching her coding style.<br/>
         During this project, I did not simply follow her code, but understood and digested it with my own.<br/>
       </p>
@@ -190,3 +193,15 @@ new App(document.querySelector(".document")! as HTMLElement, document.body);
 // 따라서 동적으로 뭔가 변할 일이 없기 때문에, 확실하기 때문에 바로 걍 타입 어썰션을 줘서 에러를 잡는다.
 // 일단 이렇게 하고, tsc -w 와치 모드로 컴파일하면 지금까지 한 내용이 라이브서버로 떠야 한다.
 // new App을 안하면, App을 만들어 놓고 사용하지 않는다는 이유로 제대로 빌드가 되지 않는다.
+
+// AWS amplify에 호스팅에 대하여.
+/*
+  1. 어느정도 자동으로 빌드를 스스로 한다. 
+  2. aws 서버에는 타입스크립트가 깔려있지 않아서 tsc -b를 사용하지못한다.
+    1. 따라서 그냥 이미 빌드된 js파일을 루트폴더에 만들어놔야 한다.
+  3. dist 폴더가 있으면 오히려 js파일을 불러오지 못 한다. 
+    1. dist 폴더에 있던 js파일을 루트폴더로 옮기니깐 정상적으로 서버가 js파일을 읽을 수 있었다.
+      1. 그 원인을 찾았다. .gitignore 파일에 dist는 제외되어서 애초에 깃레포짓에 dist폴더가 업로드 되지 않았던 것이다.
+  4. aws 서버는 자동으로 index.html 파일을 찾아 호스팅하려고 한다. 
+  5. 백엔드, 프론트엔드 부분에서 자동으로 빌드를 하려고 한다. 
+*/
